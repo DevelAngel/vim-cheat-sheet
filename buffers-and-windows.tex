@@ -1,0 +1,21 @@
+\section{Handling of Buffers and Windows}
+\label{sec:buffers-and-windows}
+
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+MODE        & Shortcut & Description \tabularnewline
+\midrule
+\modenormal & \cmdprompt{q} \cmdsep \cmdprompt{q!} & exit [and discard changes]\tabularnewline
+\modenormal & \cmdprompt{w} \cmdsep \cmdprompt{w!} & write changes [and try to override read-only files]\tabularnewline
+\modenormal & \cmddouble{z}{z} & write changes and exit (shortcut for \cmdprompt{wq})\tabularnewline
+%\modevisual & \cmdprompt{q!} & exit and discard changes\tabularnewline
+%\modeinsert & \cmdprompt{q!} & exit and discard changes\tabularnewline
+%\addlinespace
+%\modeinsert & \cmdsingle{u} & exit and discard changes\tabularnewline
+\addlinespace
+\modenormal & \cmdctrl{g} & display status line\tabularnewline
+\modenormal & \cmdctrl{d} \cmdsep \cmdctrl{u} & screen move down / up\tabularnewline
+\bottomrule
+\end{tabularx}
+
+

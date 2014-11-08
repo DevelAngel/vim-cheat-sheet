@@ -1,0 +1,34 @@
+\section{Keyboard macros}
+\label{sec:keyboard-macros}
+
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+MODE        & Shortcut & Description \tabularnewline
+\midrule
+\modenormal & \cmdsingle{\keyPoint*} & repeat last text manipulating command\tabularnewline
+\addlinespace
+\modenormal & \cmdsingle{q}[\keyChar*[a-z]] & start recording commands (in register \keyChar[a-z])\tabularnewline
+\modenormal & \cmdsingle{q} & end recording\tabularnewline
+\modenormal & \cmdsingle{@}[\keyChar*[a-z]] & play recorded commands (saved in register \keyChar[a-z])\tabularnewline
+\bottomrule
+\end{tabularx}
+
+\medskip
+Keyboard macro example (complex command sequence):
+\begin{compactitem}
+	\item Goal: \lstinline!stdio.h! \(\longrightarrow\) %
+		    \lstinline!#include "stdio.h"!
+	\item Keyboard macro:
+		\begin{compactenum}
+		\item \cmdsingle{q}[a] \cmdsep*
+		\item \cmdsingle{\keyCircumflex*} \cmdsep*
+		\item \cmdsingle{i}\lstinline!#include "!\keyEsc* \cmdsep*
+		\item \cmdsingle{\$} \cmdsep*
+		\item \cmdsingle{a}\lstinline!"!\keyEsc* \cmdsep*
+		\item \cmdsingle{j} \cmdsep*
+		\item \cmdsingle{q}
+		\end{compactenum}
+	\item Use keyboard macro with \cmdsingle{@}[a] or \cmdsingle*{@}[a]
+\end{compactitem}
+
+

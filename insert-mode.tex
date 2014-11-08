@@ -1,0 +1,38 @@
+\section{Insert mode commands}
+\label{sec:insert-mode}
+
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+MODE        & Shortcut & Description \tabularnewline
+\midrule
+\modenormal & \cmdsingle{i}[\keyString*\keyEsc*] \cmdsep \cmdsingle{a}[\keyString*\keyEsc*] & insert / append \keyString{} (left / right of cursor)\tabularnewline
+\modenormal & \cmdsingle{o}[\keyString*\keyEsc*] \cmdsep \cmdsingle{O}[\keyString*\keyEsc*] & open new line after / before current line\tabularnewline
+\modenormal & \cmdsingle{J} \cmdsep \cmdsingle*{J} & join next line / next \keyN{} lines\tabularnewline
+\modenormal & \cmdsingle{x} \cmdsep \cmdsingle{X} & delete char under / before cursor\tabularnewline
+\modenormal & \cmdsingle{\keyTilde*} \cmdsep \cmdsingle*{\keyTilde*} & exchange lowercase\(\leftrightarrow\)uppercase of current / next \keyN{} characters\tabularnewline
+\modenormal & \cmdsingle{r}[\keyChar*] & replace current character with \keyChar\tabularnewline
+\modenormal & \cmdsingle*{r}[\keyChar*] & replace next \keyN{} characters with \keyChar\tabularnewline
+\modenormal & \cmdsingle{r}[\keyEnter*] \cmdsep \cmdsingle*{r}[\keyEnter*] & exchange current character with a line break\tabularnewline
+\bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+MODE        & Shortcut & Description \tabularnewline
+\midrule
+\modenormal & \cmdsingle{d}[\keyMotion*] & delete along \keyMotion\tabularnewline
+\modenormal & \cmdsingle{c}[\keyMotion*][\keyString*\keyEsc*] & delete along \keyMotion{} and insert \keyString\tabularnewline
+\modenormal & \cmddouble{d}{d} & delete current line\tabularnewline
+\modenormal & \cmddouble{c}{c}[\keyString*\keyEsc*] & delete current line and insert \keyString\tabularnewline
+\modenormal & \cmdsingle{D} \cmdsep \cmdsingle{d}[\$] & delete current line from current position\tabularnewline
+\modenormal & \cmdsingle{C}[\keyString*\keyEsc*] \cmdsep \cmdsingle{c}[\$][\keyString*\keyEsc*] & delete current line from current position and insert \keyString\tabularnewline
+\addlinespace
+\modenormal & \cmdsingle{d}[w] & delete current word (from current position)\tabularnewline
+\modenormal & \cmdsingle{d}[\cmdsingle*[3]{w}] & delete next 3 words (from current position)\tabularnewline
+\modenormal & \cmdsingle*[3]{d}[w] & 3-times, delete current word (from current pos.)\tabularnewline
+\modenormal & \cmdsingle{c}[w][\enquote{hello}\keyEsc*] & replace current word with \enquote{hello}\tabularnewline
+\modenormal & \cmdsingle{d}[\cmdsingle{f}[>]] & delete until \enquote{>} reached, e.g. delete <html> tag\tabularnewline
+\bottomrule
+\end{tabularx}
+
+

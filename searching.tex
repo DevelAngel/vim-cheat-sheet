@@ -1,0 +1,24 @@
+\section{Searching}
+\label{sec:searching}
+
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+MODE        & Shortcut & Description \tabularnewline
+\midrule
+\modenormal & \cmdsingle{/}[\keyString*\keyEsc*] \cmdsep \cmdsingle{?}[\keyString*\keyEsc] & search for next occurence of \keyString{} (forward / backward)\tabularnewline
+\modenormal & \cmdsingle{/} \cmdsep \cmdsingle{?} & search for next occurence of last \keyString\tabularnewline
+\modenormal & \cmdsingle{n} \cmdsep \cmdsingle{N} & repeat the last search (same / reverse direction)\tabularnewline
+\modenormal & \cmdsingle{/}[\keyUp*] \cmdsep \cmdsingle{/}[\keyDown*] \cmdsep \cmdsingle{?}[\keyUp*] \cmdsep \cmdsingle{?}[\keyDown*] & step through search history\tabularnewline
+\modenormal & \cmdprompt{nohlsearch} & un-highlight last search\tabularnewline
+\modenormal & \cmdprompt{sethlsearch} \cmdsep \cmdprompt{nosethlsearch} & [do not] highlight searches\tabularnewline
+\modenormal & \cmdprompt{setincsearch} \cmdsep \cmdprompt{nosetincsearch} & [do not] use incremental searches\tabularnewline
+\bottomrule
+\end{tabularx}
+
+Example searches:
+\begin{compactitem}
+\item simple word: hello
+\item use simple regex: \keyCircumflex{} \$ \keyPoint{} ? \keyBackslash{}
+\end{compactitem}
+
+
