@@ -1,0 +1,196 @@
+%% colors
+\definecolor{colormodenormalfg}{named}{OliveDrab}
+\definecolor{colormodenormalbg}{named}{GreenYellow}
+\definecolor{colormodeinsertfg}{named}{NavyBlue}
+\definecolor{colormodeinsertbg}{named}{OldLace}
+\definecolor{colormodevisualfg}{named}{Maroon}
+\definecolor{colormodevisualbg}{named}{DarkOrange}
+
+%% commands
+% Text NORMAL MODE
+\NewDocumentCommand{\modenormaltext}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{N}}%
+		{\texttt{NORMAL}}%
+}
+
+% Text INSERT MODE
+\NewDocumentCommand{\modeinserttext}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{I}}%
+		{\texttt{INSERT}}%
+}
+
+% Text VISUAL MODE
+\NewDocumentCommand{\modevisualtext}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{V}}%
+		{\texttt{VISUAL}}%
+}
+
+% Box NORMAL MODE
+\NewDocumentCommand {\modenormal} {}
+{%
+	\fcolorbox{colormodenormalfg}{colormodenormalbg}{\textcolor{colormodenormalfg}{\modenormaltext*}}%
+}
+
+% Box INSERT MODE
+\NewDocumentCommand {\modeinsert} {}
+{%
+	\fcolorbox{colormodeinsertfg}{colormodeinsertbg}{\textcolor{colormodeinsertfg}{\modeinserttext*}}%
+}
+
+% Box VISUAL MODE
+\NewDocumentCommand {\modevisual} {}
+{%
+	\fcolorbox{colormodevisualfg}{colormodevisualbg}{\textcolor{colormodevisualfg}{\modevisualtext*}}%
+}
+
+% / or ; (command separator)
+\NewDocumentCommand{\cmdsep}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{\,\textcolor{lightgray}{;}\,}}%
+		{\texttt{\,\textcolor{lightgray}{/}\,}}%
+}
+
+% <n> (a number)
+\NewDocumentCommand{\keyN}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<n>}}%
+		{\texttt{<n>}}%
+}
+
+% <Up> (Array Up)
+\NewDocumentCommand{\keyUp}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<Up>}}%
+		{\texttt{<Up>}}%
+}
+
+% <Down> (Array Down)
+\NewDocumentCommand{\keyDown}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<Down>}}%
+		{\texttt{<Down>}}%
+}
+
+% <Left> (Array Left)
+\NewDocumentCommand{\keyLeft}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<Left>}}%
+		{\texttt{<Left>}}%
+}
+
+% <Right> (Array Right)
+\NewDocumentCommand{\keyRight}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<Right>}}%
+		{\texttt{<Right>}}%
+}
+
+% <Esc> (Escape key)
+\NewDocumentCommand{\keyEsc}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<Esc>}}%
+		{\texttt{<Esc>}}%
+}
+
+% <Enter> (Enter key)
+\NewDocumentCommand{\keyEnter}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<Enter>}}%
+		{\texttt{<Enter>}}%
+}
+
+% <Del> (Delete key)
+\NewDocumentCommand{\keyDel}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<Del>}}%
+		{\texttt{<Del>}}%
+}
+
+% \ (Backslash)
+\NewDocumentCommand{\keyBackslash}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{\textbackslash}}%
+		{\texttt{\textbackslash}}%
+}
+
+% ~ (Tilde)
+\NewDocumentCommand{\keyTilde}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{\textasciitilde}}%
+		{\texttt{\textasciitilde}}%
+}
+
+% ^ (Circumflex)
+\NewDocumentCommand{\keyCircumflex}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{\textasciicircum}}%
+		{\texttt{\textasciicircum}}%
+}
+
+% . (Point)
+\NewDocumentCommand{\keyPoint}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{.}}%
+		{\texttt{.}}%
+}
+
+% <string> or <s>
+\NewDocumentCommand{\keyString}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<s>}}%
+		{\texttt{<string>}}%
+}
+
+% <char> or <c>   <char:a-z> or <c:a-z>
+\NewDocumentCommand{\keyChar}{s o}{%
+	\IfBooleanTF {#1}%
+		{\IfNoValueTF{#2}{\texttt{<c>}}{\texttt{<c:#2>}}}%
+		{\IfNoValueTF{#2}{\texttt{<char>}}{\texttt{<char:#2>}}}%
+}
+
+% <motion> or <m>
+\NewDocumentCommand{\keyMotion}{s}{%
+	\IfBooleanTF {#1}%
+		{\texttt{<m>}}%
+		{\texttt{<motion>}}%
+}
+
+% :help    :help i
+\NewDocumentCommand{\cmdprompt}{m o}{%
+	\IfNoValueTF{#2}%
+		{:#1}%
+		{:#1~#2}%
+}
+
+% e.g. G  3G  f>
+\NewDocumentCommand{\cmdsingle}{s o m O{} O{}}{%
+	\IfBooleanTF {#1}%
+		{\IfNoValueTF{#2}{\keyN*{}}{\texttt{#2}}%
+			\texttt{#3}\texttt{#4}\texttt{#5}%
+		}%
+		{\IfNoValueTF{#2}{}{\texttt{#2}}%
+			\texttt{#3}\texttt{#4}\texttt{#5}%
+		}%
+}
+
+% e.g. gg  3gg
+\NewDocumentCommand{\cmddouble}{s o m m O{}}{%
+	\IfBooleanTF {#1}%
+		{\IfNoValueTF{#2}{\keyN*{}}{\texttt{#2}}%
+			\texttt{#3}\,\texttt{#4}\texttt{#5}%
+		}%
+		{\IfNoValueTF{#2}{}{\texttt{#2}}%
+			\texttt{#3}\,\texttt{#4}\texttt{#5}%
+		}%
+}
+
+% e.g. CTRL-x (alternative could be <C-x>, TODO)
+\NewDocumentCommand{\cmdctrl}{m}{CTRL-\texttt{#1}}
+
+% e.g. v_x
+\NewDocumentCommand{\cmdprefix}{m m}{\texttt{#1}\_\texttt{#2}}
+
+
