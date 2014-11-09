@@ -46,6 +46,12 @@
 	\fcolorbox{colormodevisualfg}{colormodevisualbg}{\textcolor{colormodevisualfg}{\modevisualtext*}}%
 }
 
+% MNOTE
+\NewDocumentCommand {\mnote} {}
+{%
+	\(\longrightarrow\)
+}
+
 % / or ; (command separator)
 \NewDocumentCommand{\cmdsep}{s}{%
 	\IfBooleanTF {#1}%

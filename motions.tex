@@ -12,22 +12,44 @@
 \item exclusive-linewise
 \end{compactitem}
 
-\begin{tabularx}{\textwidth}{l l X}
+\begin{tabularx}{\textwidth}{l l l X}
 \toprule
-MODE        & Shortcut & Description \tabularnewline
+\multicolumn{3}{c}{Shortcut}
+	    & \multicolumn{1}{c}{Description}
+	    \tabularnewline
 \midrule
-\modenormal & \cmdsingle{h} \cmdsep \cmdsingle{j} \cmdsep \cmdsingle{k} \cmdsep \cmdsingle{l} & move left / down / up / right\tabularnewline
-\modenormal & \cmdsingle{w} \cmdsep \cmdsingle{W} & move forward one [big] word\tabularnewline
-\modenormal & \cmdsingle{b} \cmdsep \cmdsingle{B} & move backward one [big] word\tabularnewline
-\modenormal & \cmdsingle{0} \cmdsep \cmdsingle{\$} & move to the begin / end of current line\tabularnewline
-\modenormal & \cmdsingle{\keyCircumflex*} & move to the first non-blank character of current line\tabularnewline
+\modenormal & \cmdsingle{h} \cmdsep \cmdsingle{j} & \cmdsingle{k} \cmdsep \cmdsingle{l}
+            & move left / down / up / right
+	    \tabularnewline
+\modenormal & \cmdsingle{w} & \cmdsingle{W}
+            & move forward one [big] word
+	    \tabularnewline
+\modenormal & \cmdsingle{b} & \cmdsingle{B}
+            & move backward one [big] word
+	    \tabularnewline
+\modenormal & \cmdsingle{0} & \cmdsingle{\$}
+            & move to the begin / end of current line
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdsingle{\keyCircumflex*}}
+            & move to the first non-blank character of current line
+	    \tabularnewline
 \addlinespace
-\modenormal & \cmdsingle*{G} \cmdsep \cmddouble*{g}{g} & move to line \keyN{} (absulte)\tabularnewline
+\modenormal & \cmdsingle*{G} & \cmddouble*{g}{g}
+            & go\,to line \keyN{}
+	    \tabularnewline
 \addlinespace
-\modenormal & \cmdsingle*{0} \cmdsep \cmdsingle*{\$} & move to the begin / end of current line\tabularnewline
+\modenormal & \cmdsingle*{0} & \cmdsingle*{\$}
+            & move to the begin / end of current line
+	    \tabularnewline
 \midrule
-\modenormal & \cmdsingle{f}[\keyChar*] \cmdsep \cmdsingle{t}[\keyChar*] & move to / 'til the next occurence of \keyChar{} to the right (under / left of cursor; \keyEsc{} aborts the search)\tabularnewline
-\modenormal & \cmdsingle{F}[\keyChar*] \cmdsep \cmdsingle{T}[\keyChar*] & move to / 'til the next occurence of \keyChar{} to the left (under / left of cursor; \keyEsc{} aborts the search)\tabularnewline
+\modenormal & \cmdsingle{f}[\keyChar*] & \cmdsingle{t}[\keyChar*]
+            & move to / 'til the next occurence of \keyChar{} to the right
+	    \tabularnewline
+\modenormal & \cmdsingle{F}[\keyChar*] & \cmdsingle{T}[\keyChar*]
+            & move to / 'til the next occurence of \keyChar{} to the left
+	    \tabularnewline
+\mnote      & \multicolumn{3}{l}{Note: \keyChar[\keyEsc*] aborts the command}
+	    \tabularnewline
 \bottomrule
 \end{tabularx}
 

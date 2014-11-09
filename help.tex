@@ -6,32 +6,64 @@
 \section{Help}
 \label{sec:help}
 
-\begin{tabularx}{\textwidth}{l l X}
+\begin{tabularx}{\textwidth}{l l l X}
 \toprule
-MODE        & Shortcut & Description \tabularnewline
+\multicolumn{3}{c}{Shortcut}
+	    & \multicolumn{1}{c}{Description}
+	    \tabularnewline
 \midrule
-\modenormal & \cmdprompt{help} & help overview\tabularnewline
-\modenormal & \cmdprompt{help}[x] & help for Normal mode command\tabularnewline
-\modenormal & \cmdprompt{help}[\cmdprefix{v}{u}] & help for Visual mode command \enquote{u}\tabularnewline
-\modenormal & \cmdprompt{help}[\cmdprefix{i}{\keyEsc*}] & help for Insert mode command \enquote{<Esc>}\tabularnewline
-\modenormal & \cmdprompt{help}[\cmdprompt{quit}] & help for Command-line command \enquote{\keyEsc}\tabularnewline
-\modenormal & \cmdprompt{help}[\cmdprefix{c}{\keyDel*}] & help for Command-line editing \enquote{\keyDel}\tabularnewline
-\modenormal & \cmdprompt{help}[-r] & help for Vim command argument \enquote{-r}\tabularnewline
-\modenormal & \cmdprompt{help}['textwidth'] & help for Option \enquote{textwidth}\tabularnewline
-\modenormal & \cmdprompt{helpgrep}[word] & search for help (matching help entries for \enquote{word})\tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}}
+            & help overview
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}[x]}
+	    & help for Normal mode command
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}[\cmdprefix{v}{u}]}
+	    & help for Visual mode command \enquote{u}
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}[\cmdprefix{i}{\keyEsc*}]}
+	    & help for Insert mode command \enquote{<Esc>}
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}[\cmdprompt{quit}]}
+	    & help for Command-line command \enquote{\keyEsc}
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}[\cmdprefix{c}{\keyDel*}]}
+	    & help for Command-line editing \enquote{\keyDel}
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}[-r]}
+            & help for Vim command argument \enquote{-r}
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}['textwidth']}
+	    & help for Option \enquote{textwidth}
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{helpgrep}[word]}
+	    & search for help (matching help entries for \enquote{word})
+	    \tabularnewline
 \addlinespace
-\modenormal & \cmdsingle{h} \cmdsep \cmdsingle{j} \cmdsep \cmdsingle{k} \cmdsep \cmdsingle{l} & move left / down / up / right in help\tabularnewline
-\modenormal & \cmddouble{z}{z} \cmdsep \cmdprompt{q} & exit help\tabularnewline
-\modenormal & \cmdctrl{]} & jump to a subject (the \enquote{tag} under the cursor)\tabularnewline
-\modenormal & \cmdctrl{T} \cmdsep \cmdctrl{O} & jump back\tabularnewline
+\modenormal & \cmdsingle{h} \cmdsep \cmdsingle{j} & \cmdsingle{k} \cmdsep \cmdsingle{l}
+            & move left / down / up / right in help
+	    \tabularnewline
+\modenormal & \cmddouble{z}{z} & \cmdprompt{q}
+            & exit help
+	    \tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdctrl{]}}
+	    & jump to a subject (the \enquote{tag} under the cursor)
+	    \tabularnewline
+\modenormal & \cmdctrl{T} & \cmdctrl{O}
+            & jump back
+	    \tabularnewline
 \bottomrule
 \end{tabularx}
 
-\begin{tabularx}{\textwidth}{l l X}
+\begin{tabularx}{\textwidth}{l l l X}
 \toprule
-MODE        & Shortcut & Description \tabularnewline
+\multicolumn{3}{c}{Shortcut}
+	    & \multicolumn{1}{c}{Description}
+	    \tabularnewline
 \midrule
-\modenormal & \cmdprompt{help}[UltiSnips] & UltiSnips (snippets) help\tabularnewline
+\modenormal & \multicolumn{2}{l}{\cmdprompt{help}[UltiSnips]}
+            & UltiSnips (snippets) help
+	    \tabularnewline
 \bottomrule
 \end{tabularx}
 
