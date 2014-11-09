@@ -1,12 +1,26 @@
-\usepackage[ngerman]{babel}
 \usepackage{subfiles}
-\usepackage[protrusion=true,expansion]{microtype}
-\usepackage[math]{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\setmainfont{Linux Libertine O}
-%\setsansfont{Linux Biolinum O} % font for sections
-%\setmonofont{Lucida Sans Typewriter}
-\usepackage[babel,german=quotes]{csquotes}	% \enquote{}
+\usepackage[ngerman]{babel}
+\usepackage[babel,german=quotes]{csquotes} % \enquote{}
+
+%% begin of *tex specific packages (e.g. pdfTeX, luaTeX)
+\usepackage{ifluatex}
+\ifluatex %% luatex specific packages
+	\usepackage[math]{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+	\setmainfont{Linux Libertine O}
+	%\setsansfont{Linux Biolinum O} % font for sections
+	%\setmonofont{Lucida Sans Typewriter}
+	\usepackage[protrusion=true,expansion]{microtype}
+\else %% pdftex specific packages
+	\usepackage[utf8]{inputenx}
+	\usepackage[T1]{fontenc}
+	\usepackage{libertine}
+	\usepackage[scaled=0.83]{beramono}
+	\usepackage[protrusion=true,expansion]{microtype}
+\fi %% end of *tex specific packages
+
+\usepackage{ragged2e}
+\usepackage{xspace}
 \usepackage{paralist}
 \usepackage[svgnames]{xcolor}
 \usepackage{hyperref}
