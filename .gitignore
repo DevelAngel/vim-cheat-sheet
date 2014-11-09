@@ -105,5 +105,14 @@ sympy-plots-for-*.tex/
 # todonotes
 *.tdo
 
+# vim specific files (common)
+.*.swp
+.*.swo
+
+# vim specific files (used by automatic tex plugin)
+*.tex.project.vim
+*._aux
+*._log
+
 # xindy
 *.xdy
