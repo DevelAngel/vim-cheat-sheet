@@ -1,3 +1,4 @@
+%% MAIN FILE
 \documentclass[ngerman,10pt]{scrartcl}
 %% preamble
 \input{preamble}
@@ -7,19 +8,20 @@
 \title{Vim Cheat Sheet}
 \author{Angelos Drossos}
 
-%% document environment
+%% main file document environment
 \begin{document}
 % title page
 \maketitle
 % sections
-\include{help}
-\include{buffers-and-windows}
-\include{motions}
-\include{insert-mode}
-\include{keyboard-macros}
-\include{digraphs}
-\include{searching}
+\subfile{help}
+\subfile{buffers-and-windows}
+\subfile{motions}
+\subfile{insert-mode}
+\subfile{keyboard-macros}
+\subfile{digraphs}
+\subfile{searching}
 %
+%% main file document environment end
 \end{document}
 
 %%% Local Variables: 
